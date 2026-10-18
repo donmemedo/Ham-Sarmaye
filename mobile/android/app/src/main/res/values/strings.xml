@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ایران‌فاندرز</string>
+    <string name="title_activity_main">ایران‌فاندرز</string>
+    <string name="package_name">ir.fundersclub.app</string>
+    <string name="custom_url_scheme">ir.fundersclub.app</string>
+</resources>

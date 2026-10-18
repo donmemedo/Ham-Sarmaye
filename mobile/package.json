@@ -1,0 +1,14 @@
+{
+  "name": "iran-funders-mobile",
+  "private": true,
+  "scripts": {
+    "sync": "mkdir -p www && cp ../frontend/public/offline.html www/index.html && cap sync",
+    "apk": "npm run sync -- android && docker run --rm --user $(id -u):$(id -g) --group-add 1002 -e HOME=/w/.home -e GRADLE_USER_HOME=/w/.gradle -v \"$PWD\":/w -w /w/android focker.ir/cimg/android:2026.08.1 ./gradlew --no-daemon --init-script /w/mirror.gradle assembleDebug && cp android/app/build/outputs/apk/debug/app-debug.apk IranFunders.apk"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/cli": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/ios": "^8.5.2"
+  }
+}

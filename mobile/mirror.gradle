@@ -1,0 +1,12 @@
+// Google Maven (dl.google.com) is geo-blocked in Iran: point every Maven repo at the Myket mirror.
+// Used only by `npm run apk`; CI outside Iran builds without it.
+def useMirror = { repos ->
+    repos.configureEach { r ->
+        if (r instanceof MavenArtifactRepository && r.url.host != "maven.myket.ir") r.url = "https://maven.myket.ir"
+    }
+}
+settingsEvaluated { s -> useMirror(s.pluginManagement.repositories) }
+allprojects { p ->
+    useMirror(p.buildscript.repositories)
+    useMirror(p.repositories)
+}

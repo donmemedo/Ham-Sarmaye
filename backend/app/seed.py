@@ -1,0 +1,232 @@
+"""Demo deals for Iran Funders Club. Amounts are in Toman. Text is {fa, en}."""
+
+
+def t(fa, en):
+    return {"fa": fa, "en": en}
+
+
+DEALS = [
+    {
+        "slug": "sepehr-pay",
+        "industry": "fintech",
+        "risk": "B",
+        "target": 25_000_000_000,
+        "raised": 18_400_000_000,
+        "investors": 1240,
+        "days": 12,
+        "return": 34,
+        "months": 18,
+        "hue": 250,
+        "name": t("سپهرپی", "SepehrPay"),
+        "tagline": t("پرداخت یکپارچه برای کسب‌وکارهای کوچک", "Unified payments for small businesses"),
+        "location": t("تهران", "Tehran"),
+        "summary": t(
+            "سپهرپی درگاه پرداخت، کیف پول و تسویه آنی را در یک پیش‌خوان ساده برای ۱۲ هزار فروشگاه فعال فراهم کرده و برای توسعه به ۵ استان دیگر سرمایه جذب می‌کند.",
+            "SepehrPay bundles payment gateway, wallet and instant settlement in one simple dashboard for 12,000 active merchants, raising to expand into 5 more provinces.",
+        ),
+        "highlights": [
+            t("رشد ۱۸۰٪ حجم تراکنش در سال گذشته", "180% YoY growth in transaction volume"),
+            t("۱۲ هزار فروشنده فعال", "12k active merchants"),
+            t("سودآور در ۳ فصل اخیر", "Profitable for the last 3 quarters"),
+        ],
+        "risks": [
+            t("وابستگی به مقررات بانک مرکزی", "Dependence on central bank regulation"),
+            t("رقابت شدید با PSPهای بزرگ", "Intense competition from large PSPs"),
+        ],
+        "team": [
+            {"name": t("نگار احمدی", "Negar Ahmadi"), "role": t("مدیرعامل", "CEO")},
+            {"name": t("آرش کریمی", "Arash Karimi"), "role": t("مدیر فنی", "CTO")},
+        ],
+        "funds": [
+            {"label": t("توسعه محصول", "Product"), "pct": 45},
+            {"label": t("بازاریابی", "Marketing"), "pct": 35},
+            {"label": t("سرمایه در گردش", "Working capital"), "pct": 20},
+        ],
+    },
+    {
+        "slug": "shafa-lab",
+        "industry": "health",
+        "risk": "A",
+        "target": 12_000_000_000,
+        "raised": 9_900_000_000,
+        "investors": 860,
+        "days": 6,
+        "return": 28,
+        "months": 12,
+        "hue": 160,
+        "name": t("شفالب", "ShafaLab"),
+        "tagline": t("آزمایش در خانه، نتیجه روی موبایل", "Lab tests at home, results on your phone"),
+        "location": t("اصفهان", "Isfahan"),
+        "summary": t(
+            "شفالب نمونه‌گیری در منزل را با ۴۰ آزمایشگاه همکار انجام می‌دهد و نتیجه را در کمتر از ۲۴ ساعت روی اپلیکیشن نمایش می‌دهد.",
+            "ShafaLab runs at-home sampling with 40 partner labs and delivers results to the app in under 24 hours.",
+        ),
+        "highlights": [
+            t("۴۰ آزمایشگاه همکار", "40 partner labs"),
+            t("نرخ بازگشت مشتری ۶۲٪", "62% repeat customer rate"),
+            t("قرارداد با ۲ بیمه تکمیلی", "Contracts with 2 insurers"),
+        ],
+        "risks": [
+            t("ریسک عملیاتی در مقیاس‌پذیری ناوگان", "Operational risk scaling the fleet"),
+            t("حساسیت داده‌های سلامت", "Health data sensitivity"),
+        ],
+        "team": [
+            {"name": t("دکتر سارا موسوی", "Dr. Sara Mousavi"), "role": t("بنیان‌گذار", "Founder")},
+            {"name": t("مهدی رضایی", "Mahdi Rezaei"), "role": t("مدیر عملیات", "COO")},
+        ],
+        "funds": [
+            {"label": t("ناوگان و تجهیزات", "Fleet & equipment"), "pct": 50},
+            {"label": t("فناوری", "Technology"), "pct": 30},
+            {"label": t("بازاریابی", "Marketing"), "pct": 20},
+        ],
+    },
+    {
+        "slug": "sabz-dasht",
+        "industry": "agritech",
+        "risk": "B",
+        "target": 18_000_000_000,
+        "raised": 6_300_000_000,
+        "investors": 410,
+        "days": 27,
+        "return": 31,
+        "months": 24,
+        "hue": 120,
+        "name": t("سبزدشت", "SabzDasht"),
+        "tagline": t("گلخانه هوشمند با ۷۰٪ آب کمتر", "Smart greenhouses using 70% less water"),
+        "location": t("شیراز", "Shiraz"),
+        "summary": t(
+            "سبزدشت با حسگرهای اینترنت اشیا و آبیاری دقیق، بهره‌وری گلخانه‌ها را دو برابر می‌کند و محصول را مستقیم به فروشگاه‌های زنجیره‌ای می‌رساند.",
+            "SabzDasht doubles greenhouse yield with IoT sensors and precision irrigation, selling directly to retail chains.",
+        ),
+        "highlights": [
+            t("مصرف آب ۷۰٪ کمتر", "70% less water"),
+            t("قرارداد خرید تضمینی با ۳ فروشگاه زنجیره‌ای", "Offtake contracts with 3 retail chains"),
+            t("۲ پتنت ثبت‌شده", "2 registered patents"),
+        ],
+        "risks": [
+            t("ریسک‌های اقلیمی", "Climate risk"),
+            t("نوسان قیمت نهاده‌ها", "Input price volatility"),
+        ],
+        "team": [
+            {"name": t("رضا نوروزی", "Reza Norouzi"), "role": t("مدیرعامل", "CEO")},
+            {"name": t("لیلا صادقی", "Leila Sadeghi"), "role": t("مدیر تحقیق و توسعه", "Head of R&D")},
+        ],
+        "funds": [
+            {"label": t("ساخت گلخانه", "Greenhouses"), "pct": 60},
+            {"label": t("حسگر و نرم‌افزار", "Sensors & software"), "pct": 25},
+            {"label": t("سرمایه در گردش", "Working capital"), "pct": 15},
+        ],
+    },
+    {
+        "slug": "khorshid-energy",
+        "industry": "energy",
+        "risk": "A",
+        "target": 40_000_000_000,
+        "raised": 33_000_000_000,
+        "investors": 2150,
+        "days": 9,
+        "return": 26,
+        "months": 36,
+        "hue": 35,
+        "name": t("انرژی خورشید", "Khorshid Energy"),
+        "tagline": t("نیروگاه خورشیدی روی بام کارخانه‌ها", "Rooftop solar for factories"),
+        "location": t("یزد", "Yazd"),
+        "summary": t(
+            "انرژی خورشید پنل‌های خورشیدی را روی بام واحدهای صنعتی نصب می‌کند و برق را با قرارداد خرید ۱۰ ساله می‌فروشد.",
+            "Khorshid installs solar panels on industrial rooftops and sells power under 10-year purchase agreements.",
+        ),
+        "highlights": [
+            t("قرارداد خرید برق ۱۰ ساله", "10-year power purchase agreements"),
+            t("۸ مگاوات ظرفیت نصب‌شده", "8 MW installed capacity"),
+            t("جریان نقدی قابل پیش‌بینی", "Predictable cash flow"),
+        ],
+        "risks": [
+            t("نوسان نرخ ارز در واردات پنل", "FX risk on panel imports"),
+            t("تغییر تعرفه‌های برق", "Tariff policy changes"),
+        ],
+        "team": [
+            {"name": t("حمید فتحی", "Hamid Fathi"), "role": t("مدیرعامل", "CEO")},
+            {"name": t("مریم جعفری", "Maryam Jafari"), "role": t("مدیر مالی", "CFO")},
+        ],
+        "funds": [
+            {"label": t("تجهیزات", "Equipment"), "pct": 70},
+            {"label": t("نصب و اجرا", "Installation"), "pct": 20},
+            {"label": t("عملیات", "Operations"), "pct": 10},
+        ],
+    },
+    {
+        "slug": "barin-logistics",
+        "industry": "logistics",
+        "risk": "C",
+        "target": 30_000_000_000,
+        "raised": 7_800_000_000,
+        "investors": 530,
+        "days": 34,
+        "return": 42,
+        "months": 24,
+        "hue": 200,
+        "name": t("برین لجستیک", "Barin Logistics"),
+        "tagline": t("ارسال همان‌روز در ۱۰ کلان‌شهر", "Same-day delivery across 10 metros"),
+        "location": t("مشهد", "Mashhad"),
+        "summary": t(
+            "برین با شبکه انبارهای کوچک شهری و مسیریابی هوشمند، ارسال همان‌روز را برای فروشگاه‌های آنلاین ارزان کرده است.",
+            "Barin makes same-day delivery affordable for online stores using micro-warehouses and smart routing.",
+        ),
+        "highlights": [
+            t("۹۴٪ تحویل به‌موقع", "94% on-time delivery"),
+            t("۳۵۰ فروشگاه آنلاین مشتری", "350 online store clients"),
+            t("هزینه هر مرسوله ۳۰٪ کمتر از رقبا", "30% lower cost per parcel"),
+        ],
+        "risks": [
+            t("هنوز به نقطه سر به سر نرسیده", "Not yet break-even"),
+            t("سرمایه‌بر بودن توسعه انبارها", "Capital-intensive warehouse rollout"),
+            t("رقابت با بازیگران بزرگ", "Competition from incumbents"),
+        ],
+        "team": [
+            {"name": t("امیر حسینی", "Amir Hosseini"), "role": t("مدیرعامل", "CEO")},
+            {"name": t("نازنین طاهری", "Nazanin Taheri"), "role": t("مدیر محصول", "CPO")},
+        ],
+        "funds": [
+            {"label": t("انبارهای شهری", "Micro-warehouses"), "pct": 55},
+            {"label": t("ناوگان", "Fleet"), "pct": 30},
+            {"label": t("فناوری", "Technology"), "pct": 15},
+        ],
+    },
+    {
+        "slug": "danesh-ai",
+        "industry": "ai",
+        "risk": "C",
+        "target": 15_000_000_000,
+        "raised": 11_200_000_000,
+        "investors": 1720,
+        "days": 18,
+        "return": 48,
+        "months": 30,
+        "hue": 290,
+        "name": t("دانش‌یار", "DaneshYar"),
+        "tagline": t("معلم خصوصی هوشمند به زبان فارسی", "An AI tutor that speaks Persian"),
+        "location": t("تبریز", "Tabriz"),
+        "summary": t(
+            "دانش‌یار یک دستیار آموزشی مبتنی بر هوش مصنوعی برای دانش‌آموزان کنکوری است که تمرین‌ها را متناسب با سطح هر نفر شخصی‌سازی می‌کند.",
+            "DaneshYar is an AI study assistant for exam-prep students that personalizes practice to each learner's level.",
+        ),
+        "highlights": [
+            t("۲۰۰ هزار کاربر فعال ماهانه", "200k monthly active users"),
+            t("افزایش ۲۳٪ میانگین نمره کاربران", "23% average score improvement"),
+            t("نرخ تبدیل به اشتراک ۸٪", "8% paid conversion"),
+        ],
+        "risks": [
+            t("ریسک فناوری و هزینه زیرساخت", "Tech and infrastructure cost risk"),
+            t("فصلی بودن تقاضا", "Seasonal demand"),
+        ],
+        "team": [
+            {"name": t("پویا شریفی", "Pouya Sharifi"), "role": t("بنیان‌گذار", "Founder")},
+            {"name": t("الهام قاسمی", "Elham Ghasemi"), "role": t("مدیر آموزش", "Head of Learning")},
+        ],
+        "funds": [
+            {"label": t("زیرساخت هوش مصنوعی", "AI infrastructure"), "pct": 40},
+            {"label": t("تولید محتوا", "Content"), "pct": 35},
+            {"label": t("رشد کاربر", "Growth"), "pct": 25},
+        ],
+    },
+]
